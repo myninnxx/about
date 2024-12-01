@@ -20,7 +20,7 @@
             overflow: hidden;
         }
 
-        /* Loading spinner styles */
+        /* Loading image (loading.png) */
         #loading {
             position: fixed;
             top: 50%;
@@ -44,13 +44,8 @@
             font-size: 18px;
         }
 
-        /* Spinner styles */
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #3498db;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
+        /* Spinning animation */
+        .spin {
             animation: spin 2s linear infinite;
         }
 
@@ -62,10 +57,8 @@
 </head>
 <body>
 
-    <!-- Loading Spinner -->
-    <div id="loading">
-        <div class="spinner"></div>
-    </div>
+    <!-- Loading Image (loading.png) -->
+    <img id="loading" src="loading.png" alt="Loading..." class="spin">
 
     <!-- Message after loading -->
     <div id="message">
@@ -74,9 +67,9 @@
     </div>
 
     <script>
-        // Wait for 5 seconds, then hide the loading spinner and show the message
+        // Wait for 5 seconds, then hide the loading image and show the message
         setTimeout(function() {
-            document.getElementById('loading').style.display = 'none'; // Hide the loading spinner
+            document.getElementById('loading').style.display = 'none'; // Hide the loading image
             document.getElementById('message').style.display = 'block'; // Show the message
             document.getElementById('message').style.opacity = 0; // Start with hidden text
             // Fade in the message
